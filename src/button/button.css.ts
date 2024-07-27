@@ -7,9 +7,10 @@ export const buttonVariants = recipe({
     cursor: 'pointer',
     lineHeight: 1,
     borderWidth: 1,
-    color: '#333',
+    borderStyle: 'solid',
     borderColor: 'transparent',
-    display: 'inlineFlex',
+    color: '#333',
+    display: 'inline-flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -27,7 +28,7 @@ export const buttonVariants = recipe({
       },
       light: {
         backgroundColor: '#ffffff',
-        borderColor: '#000000',
+        borderColor: 'black',
         ':hover': {
           backgroundColor: '#e8e8e8',
         },
