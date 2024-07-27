@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
-import { rem } from '../utils/css';
 import { recipe } from '@vanilla-extract/recipes';
+import { rem } from '../utils/css';
 
 export const inputWrapper = style({
   position: 'relative',
@@ -66,13 +66,13 @@ export const inputCtlWrapper = style({
   '@media': {
     'screen and (min-width: 1025px)': {
       selectors: {
-        [`${inputBase}[type='number']:hover:not(:disabled)`]: {
+        [`${inputBase}[type='number']:hover:not(:disabled) &`]: {
           right: rem(40),
         },
-        [`${inputBase}[type='number']:active:not(:disabled)`]: {
+        [`${inputBase}[type='number']:active:not(:disabled) &`]: {
           right: rem(40),
         },
-        [`${inputBase}[type='number']:focus:not(:disabled)`]: {
+        [`${inputBase}[type='number']:focus:not(:disabled) &`]: {
           right: rem(40),
         },
       },
@@ -85,7 +85,7 @@ export const resetXIconStyles = style({
   borderRadius: '50%',
   width: rem(28),
   height: rem(28),
-  color: 'fff',
+  color: '#fff',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

@@ -3,7 +3,7 @@ import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     '@storybook/addon-onboarding',
     '@storybook/addon-links',
@@ -46,6 +46,16 @@ const config: StorybookConfig = {
       },
     },
   ],
+  webpackFinal: (config) => {
+    config.optimization = {
+      ...(config.optimization || {}),
+      splitChunks: {
+        chunks: 'all',
+        maxSize: 250000,
+      },
+    };
+    return config;
+  },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {

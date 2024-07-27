@@ -1,3 +1,4 @@
+import { style } from '@vanilla-extract/css';
 import { rem } from '../utils/css';
 import { recipe } from '@vanilla-extract/recipes';
 
@@ -101,4 +102,11 @@ export const buttonVariants = recipe({
       },
     },
   },
+});
+
+export const searchButtonStyle = style({
+  justifyContent: 'flex-start',
+  display: 'inline-flex',
+  alignItems: 'center',
+  color: '#bbbbbb',
 });

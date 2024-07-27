@@ -3,7 +3,7 @@ import type { Preview } from '@storybook/react';
 
 import { Noto_Sans_KR } from 'next/font/google';
 
-import './global.css';
+import '../src/utils/styles/global.css';
 
 const notoSansKR = Noto_Sans_KR({ subsets: ['latin'] });
 const preview: Preview = {
@@ -24,7 +24,7 @@ const preview: Preview = {
     ),
   ],
 
-  tags: ['autodocs', 'autodocs']
+  tags: ['autodocs'],
 };
 
 export default preview;

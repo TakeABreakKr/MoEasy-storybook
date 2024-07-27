@@ -1,9 +1,10 @@
 import { style } from '@vanilla-extract/css';
+import { rem } from '../utils/css';
 
 export const radioStyle = style({
   backgroundColor: 'white',
-  width: 25,
-  height: 25,
+  width: rem(25),
+  height: rem(25),
   borderRadius: '100%',
   selectors: {
     [`&[data-state='checked']:hover`]: {

@@ -3,8 +3,8 @@ import { rem } from '../utils/css';
 import { style } from '@vanilla-extract/css';
 
 export const imageUploadContainer = style({
-  width: rem('300px'),
-  height: rem('300px'),
+  width: rem(300),
+  height: rem(300),
   border: '2px dashed #ccc',
   borderRadius: rem(8),
   display: 'flex',
@@ -13,23 +13,15 @@ export const imageUploadContainer = style({
   cursor: 'pointer',
   color: '#999',
   transition: 'background-color 200ms ease-in-out, color 200ms ease-in-out',
-  selectors: {
-    '&:hover': {
-      backgroundColor: '#cecece',
-      color: '#8c8c8c',
-      borderColor: '#8c8c8c',
-    },
-    '&:hover .plus-icon': {
-      backgroundColor: '#8c8c8c',
-    },
-    '&:active': {
-      backgroundColor: '#929292',
-      color: '#6f6f6f',
-      borderColor: '#6f6f6f',
-    },
-    '&:active .plus-icon': {
-      backgroundColor: '#6f6f6f',
-    },
+  ':hover': {
+    backgroundColor: '#cecece',
+    color: '#8c8c8c',
+    borderColor: '#8c8c8c',
+  },
+  ':active': {
+    backgroundColor: '#929292',
+    color: '#6f6f6f',
+    borderColor: '#6f6f6f',
   },
 });
 
@@ -60,11 +52,12 @@ export const plusIcon = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  transition: 'background-color 200ms ease-in-out, color 200ms ease-in-out',
   selectors: {
-    [`${imageUploadContainer}:hover > &`]: {
+    [`${imageUploadContainer}:hover &`]: {
       backgroundColor: '#8c8c8c',
     },
-    [`${imageUploadContainer}:active > &`]: {
+    [`${imageUploadContainer}:active &`]: {
       backgroundColor: '#6f6f6f',
     },
   },
