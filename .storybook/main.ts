@@ -2,6 +2,7 @@ import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+
   addons: [
     '@storybook/addon-onboarding',
     '@storybook/addon-links',
@@ -9,6 +10,7 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
   ],
+
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
@@ -27,6 +29,7 @@ const config: StorybookConfig = {
       savePropValueAsString: true,
     },
   },
+
   async webpackFinal(config) {
     if (!config.module?.rules) {
       return config;
@@ -42,6 +45,7 @@ const config: StorybookConfig = {
     });
     return config;
   },
+
   framework: {
     name: '@storybook/nextjs',
     options: {},

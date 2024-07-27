@@ -15,6 +15,7 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     (Story) => (
       <div className={`${notoSansKR.className}`}>
@@ -22,6 +23,8 @@ const preview: Preview = {
       </div>
     ),
   ],
+
+  tags: ['autodocs', 'autodocs']
 };
 
 export default preview;
